@@ -11,6 +11,11 @@ data = {
 # Create a DataFrame
 df = pd.DataFrame(data)
 
+# Add new row
+new_row = {'Name':'Ryan', 'Age': 46, 'City': 'DLH'}
+df = pd.concat([df, pd.DataFrame([new_row])], ignore_index=True)
+
+
 # Create directory if it doesn't exist
 dir_name = 'data'
 os.makedirs(dir_name, exist_ok=True)
